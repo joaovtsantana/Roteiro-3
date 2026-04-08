@@ -1,0 +1,28 @@
+public class Produto
+{
+    public string nomeProduto;
+
+}
+public class Pedido
+{
+    public string nomeCliente;
+    public Produto produto = new Produto();
+
+    public void fazerPedido()
+    {
+        Console.WriteLine($"{nomeCliente}: {produto.nomeProduto}");
+    }
+
+}
+
+
+public class Program
+{
+    public static void Main()
+    {
+        Pedido p = new Pedido();
+        p.nomeCliente = "Joao";
+        p.produto.nomeProduto = "Lasanha";
+        p.fazerPedido();
+    }
+}
